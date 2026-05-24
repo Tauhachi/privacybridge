@@ -1,0 +1,126 @@
+# Chapter 01 — Scope and Extraterritoriality
+
+*Version 0.1 — May 2026*
+
+How far does each regime reach? This is the threshold question for any privacy compliance programme. GDPR and DPDPA both assert extraterritorial scope, but they do so on different theories, with different operational consequences for organisations outside the regulating jurisdiction.
+
+---
+
+## 1. Material scope — what kind of data is covered?
+
+### GDPR (Art. 2)
+
+GDPR applies to the processing of **personal data**, defined as any information relating to an identified or identifiable natural living person. The Regulation applies to processing wholly or partly by automated means, and to non-automated processing of personal data forming part of a filing system.
+
+Excluded: processing by a natural person in the course of a purely personal or household activity; processing by competent authorities for criminal law enforcement purposes (governed by the Law Enforcement Directive instead); processing in the course of activities outside the scope of EU law.
+
+### DPDPA (s. 3)
+
+DPDPA applies to the processing of **digital personal data** within India, and to processing of digital personal data outside India where it relates to offering goods or services to data principals within India.
+
+Two important narrowings compared to GDPR:
+
+- **"Digital" only.** DPDPA applies only to personal data in digital form, or non-digital data that is subsequently digitised. Purely paper-based processing is outside scope. GDPR has no such carve-out.
+- **No special category data regime in the statute itself.** GDPR Art. 9 creates a separate, stricter regime for special categories (health, biometric, genetic, ethnic origin, political opinions, etc.). DPDPA does not — though the Data Protection Board and subordinate rules may impose enhanced obligations on certain data fiduciaries designated as "Significant Data Fiduciaries" (s. 10).
+
+### Practical implication
+
+A multinational handling Indian paper records of customer correspondence has no DPDPA obligation on those records until they are digitised. Under GDPR, the same paper records held by a filing system are in scope from day one. Organisations should not assume parity of material scope.
+
+---
+
+## 2. Territorial scope — who outside the jurisdiction is caught?
+
+### GDPR (Art. 3)
+
+GDPR applies to:
+
+- **Art. 3(1):** Processing by a controller or processor *established* in the EU, regardless of whether the processing takes place in the EU. "Establishment" is interpreted broadly (CJEU, *Weltimmo*, *Google Spain*) — even minimal stable arrangements can suffice.
+- **Art. 3(2)(a):** Processing by controllers/processors not established in the EU, where the processing relates to the **offering of goods or services** to data subjects in the EU (irrespective of payment).
+- **Art. 3(2)(b):** Processing by controllers/processors not established in the EU, where the processing relates to the **monitoring of behaviour** of data subjects, as far as that behaviour takes place in the EU.
+
+The "offering" and "monitoring" tests have produced significant CJEU and EDPB guidance, particularly EDPB Guidelines 3/2018 on the territorial scope of the GDPR.
+
+### DPDPA (s. 3)
+
+DPDPA applies to:
+
+- Processing of digital personal data **within the territory of India**.
+- Processing of digital personal data **outside India**, if such processing is "in connection with any activity related to offering of goods or services to data principals within the territory of India."
+
+Notable: DPDPA's extraterritorial trigger covers only the **"offering of goods or services"** limb. It does **not** include the GDPR's separate "monitoring of behaviour" limb. This is a deliberate narrowing.
+
+### Practical implication
+
+An ad-tech company based in Singapore that drops cookies on Indian users to build behavioural profiles, but does not itself offer any goods or service to those users, may fall outside DPDPA's extraterritorial reach — while plainly falling within GDPR Art. 3(2)(b)'s monitoring limb if the same conduct were directed at EU users. Organisations conducting cross-jurisdictional behavioural advertising should not extrapolate from GDPR scope to DPDPA scope.
+
+The narrower DPDPA scope is one of the most consequential differences between the two regimes for the ad-tech, analytics, and AI-training data sectors.
+
+---
+
+## 3. Establishment and "main establishment"
+
+GDPR's concept of "main establishment" (Art. 4(16)) drives the One-Stop-Shop mechanism — a controller with establishments in multiple Member States deals with a single Lead Supervisory Authority. DPDPA has no equivalent: the Data Protection Board of India is a single national authority, and the question of "main establishment" does not arise within India in the same federal-supervisory sense.
+
+For multinationals, this means an EU-headquartered group accustomed to managing GDPR exposure through a Lead SA in Ireland (Dublin being the de facto seat of supervision for most US tech) cannot replicate that structure in India. DPDPA compliance is centralised and direct.
+
+---
+
+## 4. Public-interest and state exemptions
+
+### GDPR
+
+GDPR provides limited exemptions, mostly through Member State derogations (Art. 23) for national security, defence, criminal law enforcement, and certain other public interests. Member States must legislate these specifically.
+
+### DPDPA
+
+DPDPA's s. 17 exemptions are notably broader. The Central Government may, by notification, exempt any "instrumentality of the State" from any or all provisions of the Act, in the interest of:
+
+- sovereignty and integrity of India
+- security of the State
+- friendly relations with foreign States
+- public order
+- preventing incitement to any cognizable offence
+
+The Central Government may also exempt entire categories of data fiduciaries by notification (s. 17(3)–(5)).
+
+### Practical implication
+
+The exemptions architecture under DPDPA gives the Indian government substantially broader latitude than EU Member States enjoy under GDPR's derogations regime. Organisations processing data on behalf of the State, or those whose activities touch national security, should track exemption notifications carefully — they materially change the compliance posture.
+
+---
+
+## 5. Quick comparison table
+
+| Dimension | GDPR | DPDPA | Operational difference |
+|---|---|---|---|
+| Form of data covered | Personal data in any form (incl. structured paper filing systems) | Digital personal data only | DPDPA narrower; paper-only records out of scope until digitised |
+| Special category regime | Yes (Art. 9) | No statutory regime; subordinate rules may apply via SDF designation | GDPR more prescriptive on sensitive data |
+| Extraterritoriality — goods/services | Yes | Yes | Broadly parallel |
+| Extraterritoriality — behavioural monitoring | Yes (Art. 3(2)(b)) | No | Major gap; ad-tech / analytics sector materially affected |
+| One-Stop-Shop / Lead SA | Yes | No (single national authority) | EU multinationals cannot replicate Irish-style Lead SA structure |
+| State / public interest exemption | Member State derogations (Art. 23) | Broad Central Government exemption power (s. 17) | DPDPA more permissive of state exemptions |
+
+---
+
+## 6. Open questions and watch items
+
+- **DPDPA Rules on extraterritorial enforcement.** As of the date of this draft, the practical mechanics of enforcing DPDPA against non-Indian data fiduciaries are untested. EU experience (Schrems, Meta, TikTok enforcement) shows that extraterritorial enforcement is possible but resource-intensive; India's Data Protection Board will need to develop similar capability.
+- **Treatment of pseudonymised data.** GDPR treats pseudonymised data as personal data (Recital 26). DPDPA does not explicitly address pseudonymisation. Forthcoming Rules or DPB guidance will need to clarify.
+- **Interaction with sectoral laws.** Both regimes interact with sectoral laws — financial services, health, telecom — in ways that affect actual scope on the ground. Future chapters will address sectoral overlays.
+
+---
+
+## Sources and further reading
+
+- Regulation (EU) 2016/679 (GDPR)
+- The Digital Personal Data Protection Act, 2023 (Act 22 of 2023), India
+- EDPB Guidelines 3/2018 on the territorial scope of the GDPR
+- CJEU, *Google Spain* (C-131/12); *Weltimmo* (C-230/14)
+- Ministry of Electronics and Information Technology (MeitY) consultation papers on DPDPA Rules
+
+---
+
+*This chapter is a living document. Open an Issue on the repository to flag corrections or propose updates.*
+
+*Licensed CC BY 4.0. Author: Maya.*
